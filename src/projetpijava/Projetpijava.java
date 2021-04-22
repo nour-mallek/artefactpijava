@@ -10,6 +10,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import Service.ServiceUser;
+import Entites.user;
+import java.io.IOException;
 
 /**
  *
@@ -19,12 +22,25 @@ public class Projetpijava extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        //Parent root = FXMLLoader.load(getClass().getResource("formlogin.fxml"));
         
-        Scene scene = new Scene(root);
+       /* Scene scene = new Scene(root);
         
         stage.setScene(scene);
-        stage.show();
+        stage.show();*/
+   
+            // Parent root = FXMLLoader.load(getClass().getResource("njarab.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("formlogin.fxml"));
+            Scene scene = new Scene(root);
+            stage.setTitle("Artefact");
+            stage.setScene(scene);
+            stage.show();
+       
+            
+        
+    
+        
+        
     }
 
     /**

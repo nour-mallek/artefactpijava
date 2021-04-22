@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="596.0" prefWidth="803.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetpijava.FormloginController">
+    <stylesheets>
+        <URL value="@formlogin.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="869.0" fitWidth="1202.0" layoutX="-152.0" layoutY="-72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Icons/back.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="usernametf" layoutX="319.0" layoutY="200.0" styleClass="jfx-text-field" />
+      <Label layoutX="242.0" layoutY="204.0" text="Username" textFill="#ffc100" />
+      <Label layoutX="244.0" layoutY="245.0" text="Password" />
+      <Label fx:id="frogot" layoutX="217.0" layoutY="343.0" onMouseClicked="#forgot" text="Forgetten password ?" />
+      <Button fx:id="btnlogin" layoutX="372.0" layoutY="279.0" mnemonicParsing="false" onAction="#login" styleClass="-" text="login" />
+      <PasswordField fx:id="passwordtf" layoutX="319.0" layoutY="241.0" />
+   </children>
+</AnchorPane>

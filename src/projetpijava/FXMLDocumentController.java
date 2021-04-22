@@ -4,13 +4,17 @@
  * and open the template in the editor.
  */
 package projetpijava;
-
+import Entites.user;
+import Service.ServiceUser;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+
 
 /**
  *
@@ -20,16 +24,37 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private Label label;
-    
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
+    private TextField usernametf;
+    @FXML
+    private TextField prenomtf;
+    @FXML
+    private TextField nomtf;
+    @FXML
+    private TextField emailtf;
+    @FXML
+    private TextField passwordtf;
+    @FXML
+    private Button addbutton;
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+     @FXML
+    private void addUser(ActionEvent event) {
+        String Username = usernametf.getText();
+        String prenom = prenomtf.getText();
+        String nom = nomtf.getText();
+        String Email = emailtf.getText();
+        String Password = passwordtf.getText();
+        
+      
+        user u = new user(Username,prenom,nom,Email,Password);
+        ServiceUser users = new ServiceUser();
+        users.AddUser(u);
+        
+    }
     
 }
