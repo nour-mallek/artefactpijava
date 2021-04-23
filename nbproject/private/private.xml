@@ -5,15 +5,14 @@
         <group>
             <file>file:/E:/javafx/artefactpijava/src/projetpijava/reclamtioon.fxml</file>
             <file>file:/E:/javafx/artefactpijava/src/projetpijava/reclamationback.fxml</file>
-            <file>file:/E:/javafx/artefactpijava/src/Entites/Reclamation.java</file>
-            <file>file:/E:/javafx/artefactpijava/src/projetpijava/ReservationescController.java</file>
+            <file>file:/E:/javafx/artefactpijava/src/projetpijava/ResetController.java</file>
+            <file>file:/E:/javafx/artefactpijava/src/Utils/Maconnexion.java</file>
             <file>file:/E:/javafx/artefactpijava/src/projetpijava/fxml.css</file>
             <file>file:/E:/javafx/artefactpijava/src/projetpijava/TvuserController.java</file>
             <file>file:/E:/javafx/artefactpijava/src/projetpijava/FXML.fxml</file>
-            <file>file:/E:/javafx/artefactpijava/src/Service/ServiceReclamation.java</file>
-            <file>file:/E:/javafx/artefactpijava/src/projetpijava/ReclamtioonController.java</file>
-            <file>file:/E:/javafx/artefactpijava/src/projetpijava/ReclamationbackController.java</file>
+            <file>file:/E:/javafx/artefactpijava/src/projetpijava/SendcodeController.java</file>
             <file>file:/E:/javafx/artefactpijava/src/projetpijava/reclamationback.css</file>
+            <file>file:/E:/javafx/artefactpijava/src/projetpijava/reset.fxml</file>
             <file>file:/E:/javafx/artefactpijava/src/projetpijava/Projetpijava.java</file>
         </group>
     </open-files>

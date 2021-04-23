@@ -30,7 +30,7 @@ public class Projetpijava extends Application {
         stage.show();*/
    
             // Parent root = FXMLLoader.load(getClass().getResource("njarab.fxml"));
-            Parent root = FXMLLoader.load(getClass().getResource("formlogin.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("sendcode.fxml"));
             Scene scene = new Scene(root);
             stage.setTitle("Artefact");
             stage.setScene(scene);
