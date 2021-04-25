@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package Services;
+import Entites.Voiture;
+import java.util.List;
+import javafx.collections.ObservableList;
 
 
 /**
@@ -11,6 +14,15 @@ package Services;
  * @author Nour
  */
 public interface IServiceVoiture {
+   public void AddVoiture(Voiture v);
+   public ObservableList<Voiture> AfficherVoiture();
+    public void supprimer(Voiture v);
+   public void modifier (Voiture v);
    
+    
+
+
+
+
     
 }

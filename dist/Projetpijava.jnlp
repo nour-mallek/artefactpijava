@@ -8,11 +8,12 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Projetpijava.jar" size="403450" download="eager" />
+    <jar href="Projetpijava.jar" size="491718" download="eager" />
     <jar href="lib\activation.jar" size="124332" download="eager" />
     <jar href="lib\controlsfx-8.40.11.jar" size="985420" download="eager" />
     <jar href="lib\mail.jar" size="666983" download="eager" />
     <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\twilio-8.8.0-jar-with-dependencies.jar" size="8354602" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Projetpijava" >
     <param name="requiredFXVersion" value="8.0+"/>

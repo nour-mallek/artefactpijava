@@ -57,6 +57,7 @@ public class FormloginController implements Initializable {
       
       
         Parent root = FXMLLoader.load(getClass().getResource("tvuser.fxml"));
+        
         Stage stage = new Stage();
         Scene scene = new Scene(root);
         

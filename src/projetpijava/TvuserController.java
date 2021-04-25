@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import Service.ServiceUser;
+import java.util.Random;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -94,8 +95,11 @@ public class TvuserController implements Initializable {
     @FXML
     private void modifier(ActionEvent event) {
        user u = tvusers.getSelectionModel().getSelectedItem();
+       Random rand = new Random();
+        int randomCode = rand.nextInt(999);
+      
         ServiceUser ts = new ServiceUser();
-        u.setId_user(458);
+        u.setId_user(randomCode);
         u.setNom(tfnom.getText());
         u.setUsername(tfusername.getText());
         u.setPrenom(tfprenom.getText());
