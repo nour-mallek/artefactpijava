@@ -113,6 +113,11 @@ public class FXMLvoitureController implements Initializable {
     private ImageView imagenews;
     @FXML
     private Button voirstat;
+    private Label MatriculeLabel;
+    @FXML
+    private Label LabelPrix;
+    @FXML
+    private Label labelControle;
     
     
 
@@ -167,14 +172,83 @@ public class FXMLvoitureController implements Initializable {
         ServiceVoiture sv = new ServiceVoiture();
         Voiture v = new Voiture () ;
         
-                v.setMatricule(tfMatricule.getText ());
-                v.setModele(tfmodele.getText ());
-                v.setMarque(tfmarque.getText ());
-                v.setPrix(Float.parseFloat (tfprix.getText ()) );
-                v.setDescription(tfdescription.getText ());
-                v.setBoite_ma(tfboite.getText ());
-                v.setVille(tfville.getText ());
-                v.setImage(ImgPath.getText ());
+        
+        String MatriculeSaisi = tfMatricule.getText();
+        String ModeleSaisi = tfmodele.getText();
+        String MarqueSaisi = tfmarque.getText();
+        int PrixSaisi = Integer.parseInt(tfprix.getText());
+        String DescriptionSaisi = tfdescription.getText();
+        String BoiteSaisi = tfboite.getText();
+        String VilleSaisi = tfville.getText();
+        String ImgSaisi = ImgPath.getText();
+
+        
+        
+        
+        int err = 0 ; //compteur d'erreur
+        // controle de saisie sur les infos de voiture
+        
+       if (MatriculeSaisi.length()==0) {
+           labelControle.setText("Veuillez saisir le matricule");
+          err++;
+       }
+       if (MatriculeSaisi.length()>10) {
+           labelControle.setText(" le matricule que vous avez saisie est trop long");
+          err++;
+       }
+       if (ModeleSaisi.length()==0) {
+           labelControle.setText("Veuillez saisir le modele ");
+          err++;
+       }
+       if (ModeleSaisi.length()>8) {
+           labelControle.setText(" le modele que vous avez saisie est trop long ");
+          err++;
+       }
+       if (MarqueSaisi.length()==0) {
+           labelControle.setText("Veuillez saisir la marque ");
+          err++;
+       }
+       if (MarqueSaisi.length()>8) {
+           labelControle.setText("la marque que vous avez saisie est trop longue. ");
+          err++;
+       }
+        if (DescriptionSaisi.length()==0) {
+           labelControle.setText("Veuillez saisir une description ");
+          err++;
+       }
+         if (DescriptionSaisi.length()> 10) {
+           labelControle.setText("La description que vous avez saisie est trop longue.  ");
+          err++;
+       }
+        if (ImgSaisi.length()==0) {
+           labelControle.setText("Veuillez saisir une image ");
+          err++;
+       }
+       
+       
+        
+          
+        if (err > 0) {
+             Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Voiture");
+                alert.setHeaderText(null);
+                alert.setContentText("Veuillez verifier les champs");
+
+                alert.showAndWait();
+                
+               
+        }
+        
+        else { 
+                   
+                v.setMatricule(MatriculeSaisi);
+                v.setModele(ModeleSaisi);
+                v.setMarque(MarqueSaisi);                
+                v.setPrix(PrixSaisi);
+                v.setDescription(DescriptionSaisi);
+                v.setBoite_ma(BoiteSaisi);
+                v.setVille( VilleSaisi);
+                v.setImage(ImgSaisi);
                 
              try{
                 
@@ -199,7 +273,7 @@ public class FXMLvoitureController implements Initializable {
                 
                  
                          
-    }
+    }}
 //    @FXML
 //    private void showvoiture() {
 //    ServiceVoiture sv = new ServiceVoiture();

@@ -34,24 +34,26 @@
       <TextField fx:id="tfnumdetel" layoutX="97.0" layoutY="120.0" styleClass="jfx-text-field" />
       <DatePicker fx:id="tfstartat" layoutX="97.0" layoutY="162.0" prefHeight="19.0" prefWidth="165.0" styleClass="jfx-text-field" />
       <DatePicker fx:id="tfendat" layoutX="97.0" layoutY="205.0" prefHeight="25.0" prefWidth="166.0" styleClass="jfx-text-field" />
-      <TableView fx:id="tvlocationv" layoutX="333.0" layoutY="20.0" onKeyPressed="#deselect" onMouseClicked="#select" prefHeight="392.0" prefWidth="622.0">
+      <TableView fx:id="tvlocationv" layoutX="314.0" layoutY="20.0" onKeyPressed="#deselect" onMouseClicked="#select" prefHeight="392.0" prefWidth="641.0">
         <columns>
-          <TableColumn fx:id="cnom" prefWidth="42.0" text="Nom" />
-            <TableColumn fx:id="cprenom" prefWidth="53.666656494140625" text="Prenom" />
-            <TableColumn fx:id="cnumdetel" prefWidth="89.66665649414062" text="Numdetel" />
-            <TableColumn fx:id="cstartat" prefWidth="91.66668701171875" text="Startat" />
-            <TableColumn fx:id="cendat" minWidth="0.0" prefWidth="102.3333740234375" text="Endat" />
-            <TableColumn fx:id="cheuredebut" prefWidth="86.6666259765625" text="Heuredebut" />
-            <TableColumn fx:id="cheurefin" prefWidth="78.0" text="Heurefin" />
-            <TableColumn fx:id="colvoiture" prefWidth="74.33331298828125" text="voiture" />
+          <TableColumn fx:id="cnom" prefWidth="68.0" text="Nom" />
+            <TableColumn fx:id="cprenom" prefWidth="59.0" text="Prenom" />
+            <TableColumn fx:id="cnumdetel" prefWidth="88.0" text="Numdetel" />
+            <TableColumn fx:id="cstartat" prefWidth="90.0" text="Startat" />
+            <TableColumn fx:id="cendat" minWidth="0.0" prefWidth="92.0" text="Endat" />
+            <TableColumn fx:id="cheuredebut" prefWidth="88.0" text="Heuredebut" />
+            <TableColumn fx:id="cheurefin" prefWidth="105.0" text="Heurefin" />
+            <TableColumn fx:id="colvoiture" prefWidth="50.0" text="voiture" />
         </columns>
       </TableView>
       <Button fx:id="btnaffiche" layoutX="377.0" layoutY="454.0" mnemonicParsing="false" onAction="#showlocation" text="Afficher" />
       <Button fx:id="btnmodifier" layoutX="294.0" layoutY="454.0" mnemonicParsing="false" onAction="#modifierlocation" text="Modifier" />
       <Button fx:id="btnsuppr" layoutX="443.0" layoutY="454.0" mnemonicParsing="false" onAction="#supprimerlocation" text="Supprimer" />
+      <Button fx:id="btnlocation" layoutX="216.0" layoutY="454.0" mnemonicParsing="false" onAction="#Ajouterlocation" text="Ajouter" />
       <ComboBox fx:id="idcombo" layoutX="97.0" layoutY="348.0" onAction="#affichercombo" prefWidth="150.0" styleClass="jfx-text-field" />
       <TextField fx:id="tfheured" layoutX="97.0" layoutY="253.0" styleClass="jfx-text-field" />
       <TextField fx:id="tfheurefin" layoutX="97.0" layoutY="300.0" styleClass="jfx-text-field" />
       <Label layoutX="18.0" layoutY="352.0" text="Voiture" textFill="#ffc100" />
+      <Button fx:id="statbtn" layoutX="720.0" layoutY="543.0" mnemonicParsing="false" onAction="#statlocationv" prefHeight="25.0" prefWidth="159.0" text="Voir les statistiques" />
    </children>
 </AnchorPane>

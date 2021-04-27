@@ -6,14 +6,22 @@
 package projetpijava;
 import Entites.user;
 import Service.ServiceUser;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
 
 
 /**
@@ -36,6 +44,8 @@ public class FXMLDocumentController implements Initializable {
     private TextField passwordtf;
     @FXML
     private Button addbutton;
+    @FXML
+    private PasswordField confirmtf;
     
     
     @Override
@@ -43,18 +53,44 @@ public class FXMLDocumentController implements Initializable {
         // TODO
     }    
      @FXML
-    private void addUser(ActionEvent event) {
+    private void addUser(ActionEvent event) throws IOException {
+         if(passwordtf.getText().equals(confirmtf.getText())){
         String Username = usernametf.getText();
         String prenom = prenomtf.getText();
         String nom = nomtf.getText();
         String Email = emailtf.getText();
         String Password = passwordtf.getText();
         
-      
-        user u = new user(Username,prenom,nom,Email,Password);
-        ServiceUser users = new ServiceUser();
-        users.AddUser(u);
+                  user u = new user(Username, prenom, nom, Email, Password);
+             ServiceUser users = new ServiceUser();
+             users.AddUser(u);
+             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+             alert.setTitle("Success");
+             alert.setHeaderText("");
+             alert.setContentText("utlilisateur ajouté");
+             alert.show();
+             Parent root = FXMLLoader.load(getClass().getResource("formlogin.fxml"));
+            
+        
+             Stage stage = new Stage();
+             Scene scene = new Scene(root);
+
+             stage.setScene(scene);
+             stage.show();
+         }
+         else{
+             Alert alert = new Alert(Alert.AlertType.ERROR);
+             alert.setTitle("Failed");
+             alert.setHeaderText("");
+             alert.setContentText("Password not matching");
+
+             alert.show();
+          
+           
+          
+        }
+         }
         
     }
     
-}
+

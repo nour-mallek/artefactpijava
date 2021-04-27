@@ -9,21 +9,21 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="596.0" prefWidth="803.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetpijava.FormloginController">
+<AnchorPane id="AnchorPane" prefHeight="474.0" prefWidth="835.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetpijava.FormloginController">
     <stylesheets>
         <URL value="@formlogin.css" />
     </stylesheets>
    <children>
-      <ImageView fitHeight="869.0" fitWidth="1202.0" layoutX="-152.0" layoutY="-72.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="657.0" fitWidth="1019.0" layoutX="-152.0" layoutY="-72.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Icons/back.jpg" />
          </image>
       </ImageView>
       <TextField fx:id="usernametf" layoutX="319.0" layoutY="200.0" styleClass="jfx-text-field" />
       <Label layoutX="242.0" layoutY="204.0" text="Username" textFill="#ffc100" />
-      <Label layoutX="244.0" layoutY="245.0" text="Password" />
-      <Label fx:id="frogot" layoutX="217.0" layoutY="343.0" onMouseClicked="#forgot" text="Forgetten password ?" />
-      <Button fx:id="btnlogin" layoutX="372.0" layoutY="279.0" mnemonicParsing="false" onAction="#login" styleClass="-" text="login" />
-      <PasswordField fx:id="passwordtf" layoutX="319.0" layoutY="241.0" />
+      <Label layoutX="244.0" layoutY="245.0" text="Password" textFill="#ffc100" />
+      <Label fx:id="frogot" layoutX="217.0" layoutY="343.0" onMouseClicked="#forgot" text="Forgetten password ?" textFill="#ffc100" />
+      <Button fx:id="btnlogin" layoutX="348.0" layoutY="282.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="81.0" text="login" />
+      <PasswordField fx:id="passwordtf" layoutX="319.0" layoutY="241.0" styleClass="jfx-password-field" />
    </children>
 </AnchorPane>

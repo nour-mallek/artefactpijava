@@ -2,22 +2,32 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane id="AnchorPane" prefHeight="376.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetpijava.FXMLDocumentController">
     <children>
-        <Label fx:id="label" layoutX="57.0" layoutY="64.0" minHeight="16" minWidth="69" text="Nom" />
-      <Button id="add" fx:id="addbutton" layoutX="176.0" layoutY="235.0" mnemonicParsing="false" onAction="#addUser" text="S'inscrire" />
-      <Label layoutX="51.0" layoutY="103.0" text="Prenom" />
-      <TextField id="Username" fx:id="usernametf" layoutX="133.0" layoutY="23.0" />
-      <TextField id="prenom" fx:id="prenomtf" layoutX="133.0" layoutY="99.0" />
-      <TextField id="nom" fx:id="nomtf" layoutX="133.0" layoutY="60.0" />
-      <TextField id="Email" fx:id="emailtf" layoutX="133.0" layoutY="141.0" />
-      <TextField id="Password" fx:id="passwordtf" layoutX="133.0" layoutY="176.0" />
-      <Label layoutX="51.0" layoutY="27.0" text="Username" />
+      <ImageView fitHeight="465.0" fitWidth="573.0" layoutX="-22.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@176089569_356451269137233_7843013093048441554_n%20(1).jpg" />
+         </image>
+      </ImageView>
+        <Label fx:id="label" layoutX="118.0" layoutY="73.0" minHeight="16" minWidth="69" text="Nom" textFill="#ffc100" />
+      <Button id="add" fx:id="addbutton" layoutX="251.0" layoutY="281.0" mnemonicParsing="false" onAction="#addUser" prefHeight="0.0" prefWidth="63.0" text="S'inscrire" />
+      <Label layoutX="113.0" layoutY="112.0" text="Prenom" textFill="#ffc100" />
+      <TextField id="Username" fx:id="usernametf" layoutX="201.0" layoutY="32.0" />
+      <TextField id="prenom" fx:id="prenomtf" layoutX="201.0" layoutY="108.0" />
+      <TextField id="nom" fx:id="nomtf" layoutX="201.0" layoutY="69.0" />
+      <TextField id="Email" fx:id="emailtf" layoutX="201.0" layoutY="150.0" />
+      <Label layoutX="107.0" layoutY="36.0" text="Username" textFill="#ffc100" />
       <Label layoutX="58.0" layoutY="145.0" />
-      <Label layoutX="48.0" layoutY="180.0" text="Password" />
-      <Label layoutX="51.0" layoutY="145.0" prefHeight="17.0" prefWidth="36.0" text="Email" />
+      <Label layoutX="102.0" layoutY="189.0" text="Password" textFill="#ffc100" />
+      <Label layoutX="116.0" layoutY="154.0" prefHeight="17.0" prefWidth="36.0" text="Email" textFill="#ffc100" />
+      <PasswordField fx:id="passwordtf" layoutX="201.0" layoutY="185.0" />
+      <PasswordField fx:id="confirmtf" layoutX="201.0" layoutY="224.0" />
+      <Label layoutX="87.0" layoutY="228.0" text="confirm password" textFill="#ffc100" />
     </children>
 </AnchorPane>

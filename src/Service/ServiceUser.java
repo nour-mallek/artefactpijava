@@ -114,7 +114,8 @@ public class ServiceUser implements IServiceUser {
         }
     }
 
-    public void login(user user) {
+    public int login(user user) {
+        int x=0;
         String query="select * FROM `user` WHERE `Username`=? and `Password`=? ";
         try {
             PreparedStatement pst=con.prepareStatement(query);
@@ -122,6 +123,7 @@ public class ServiceUser implements IServiceUser {
             pst.setString(2, user.getPassword());
             ResultSet rs = pst.executeQuery();  
             if(rs.next()){
+                x=1;
                 System.out.println("login sucess");
             }else
             { System.out.println("login failed");
@@ -129,7 +131,7 @@ public class ServiceUser implements IServiceUser {
         } catch (SQLException ex) {
             Logger.getLogger(ServiceUser.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+        return x;
         
     }
     

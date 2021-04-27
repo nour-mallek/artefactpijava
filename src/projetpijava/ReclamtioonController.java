@@ -7,6 +7,7 @@ package projetpijava;
 import Service.ServiceReclamation;
 import Entites.Reclamation;
 import Utils.Maconnexion;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -16,11 +17,16 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -68,7 +74,7 @@ public class ReclamtioonController implements Initializable {
     }    
 
     @FXML
-    private void addrecla(ActionEvent event) {
+    private void addrecla(ActionEvent event) throws IOException {
         String text_recla = tfrecla.getText();
         String u=combo.getSelectionModel().getSelectedItem();
         gl= new ServiceReclamation().select_id_bynom(u);
@@ -78,6 +84,17 @@ public class ReclamtioonController implements Initializable {
         ur.setText_reclamation(text_recla);
         ServiceReclamation recla = new ServiceReclamation();
        recla.AddReclamation(ur);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+             alert.setTitle("Success");
+             alert.setHeaderText("");
+             alert.setContentText("Reclamation envoyer");
+             alert.show();
+             Parent root = FXMLLoader.load(getClass().getResource("reclamationback.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        
+        stage.setScene(scene);
+        stage.show();
     }
     
 }

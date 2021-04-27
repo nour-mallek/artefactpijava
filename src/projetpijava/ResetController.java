@@ -17,6 +17,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javafx.scene.control.Alert;
 
 /**
  * FXML Controller class
@@ -55,11 +56,22 @@ public class ResetController implements Initializable {
            pst.setString(2,SendcodeController.mail);
            pst.executeUpdate();
            System.out.println("Reset secuesss");
+           Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+             alert.setTitle("Success");
+             alert.setHeaderText("");
+             alert.setContentText("password modifié");
+             alert.show();
 
     }
         else
         {
             System.out.println("password not matching");
+               Alert alert = new Alert(Alert.AlertType.ERROR);
+             alert.setTitle("Failed");
+             alert.setHeaderText("");
+             alert.setContentText("Password not matching");
+
+             alert.show();
         }
     
 }

@@ -19,7 +19,7 @@
          </image>
       </ImageView>
       <ComboBox fx:id="combo" layoutX="446.0" layoutY="88.0" prefWidth="150.0" />
-      <Button fx:id="submitbtn" layoutX="512.0" layoutY="377.0" mnemonicParsing="false" onAction="#addrecla" text="Button" />
+      <Button fx:id="submitbtn" layoutX="512.0" layoutY="377.0" mnemonicParsing="false" onAction="#addrecla" text="Validez" />
       <TextArea fx:id="tfrecla" layoutX="421.0" layoutY="129.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

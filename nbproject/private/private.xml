@@ -3,14 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/E:/javafx/artefactpijava/src/projetpijava/formlogin.css</file>
             <file>file:/E:/javafx/artefactpijava/src/projetpijava/ResetController.java</file>
-            <file>file:/E:/javafx/artefactpijava/src/projetpijava/TvuserController.java</file>
-            <file>file:/E:/javafx/artefactpijava/src/projetpijava/FXML.fxml</file>
-            <file>file:/E:/javafx/artefactpijava/src/projetpijava/SendcodeController.java</file>
-            <file>file:/E:/javafx/artefactpijava/src/projetpijava/reclamationback.css</file>
-            <file>file:/E:/javafx/artefactpijava/src/projetpijava/reset.fxml</file>
+            <file>file:/E:/javafx/artefactpijava/src/projetpijava/FXMLfrontController.java</file>
+            <file>file:/E:/javafx/artefactpijava/src/projetpijava/FXMLDocumentController.java</file>
+            <file>file:/E:/javafx/artefactpijava/src/projetpijava/ReservationescController.java</file>
+            <file>file:/E:/javafx/artefactpijava/src/projetpijava/formlogin.fxml</file>
+            <file>file:/E:/javafx/artefactpijava/src/projetpijava/BackController.java</file>
+            <file>file:/E:/javafx/artefactpijava/src/projetpijava/FormloginController.java</file>
+            <file>file:/E:/javafx/artefactpijava/src/projetpijava/MenuController.java</file>
+            <file>file:/E:/javafx/artefactpijava/src/projetpijava/tvuser.fxml</file>
             <file>file:/E:/javafx/artefactpijava/src/projetpijava/Projetpijava.java</file>
-            <file>file:/E:/javafx/artefactpijava/src/Service/ServiceUser.java</file>
         </group>
     </open-files>
 </project-private>

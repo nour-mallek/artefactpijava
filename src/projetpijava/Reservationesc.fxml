@@ -26,7 +26,7 @@
             <Image url="@Icons/back.jpg" />
          </image>
       </ImageView>
-      <TableView fx:id="tvreservation" layoutX="144.0" layoutY="507.0" onKeyPressed="#deselect" onMouseClicked="#select" prefHeight="231.0" prefWidth="1106.0" styleClass="tree-table-view">
+      <TableView fx:id="tvreservation" layoutX="148.0" layoutY="480.0" onKeyPressed="#deselect" onMouseClicked="#select" prefHeight="87.0" prefWidth="1106.0" styleClass="tree-table-view">
         <columns>
           <TableColumn fx:id="colnbre" prefWidth="113.0" text="nbre personne" />
           <TableColumn fx:id="coldate" prefWidth="230.0" text="date souhaitée" />
@@ -96,5 +96,13 @@
             <Image url="@Icons/refresh.png" />
          </image>
       </ImageView>
+      <TableView fx:id="tvescapade" layoutX="148.0" layoutY="627.0" onKeyPressed="#deselect" onMouseClicked="#select" prefHeight="228.0" prefWidth="891.0" tableMenuButtonVisible="true">
+         <columns>
+            <TableColumn fx:id="col1" prefWidth="116.0" text="nom" />
+            <TableColumn fx:id="col2" prefWidth="454.0" text="description" />
+            <TableColumn fx:id="col3" prefWidth="137.0" text="prix" />
+            <TableColumn fx:id="col4" minWidth="0.0" prefWidth="179.0" text="ville" />
+         </columns>
+      </TableView>
    </children>
 </AnchorPane>

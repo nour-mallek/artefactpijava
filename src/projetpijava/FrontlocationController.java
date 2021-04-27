@@ -90,6 +90,8 @@ public class FrontlocationController implements Initializable {
          ServiceLocationv sl = new ServiceLocationv();
        
         Locationv v = new Locationv () ;
+        
+        
             v.setNom(tfnom.getText ());
             v.setPrenom(tfprenom.getText ());
             v.setNumerodetelephone((int) Float.parseFloat(tfnumdetel.getText ()));
@@ -97,7 +99,7 @@ public class FrontlocationController implements Initializable {
             v.setEndat(new java.sql.Date(new java.util.Date().getTime()));
             v.setHeuredebut(tfheured.getText());
             v.setHeurefin(tfheurefin.getText());
-             try{
+            try{
                 
             Twilio.init(ACCOUNT_SID,AUTH_TOKEN);
             String msg="Votre demande a été effectué avec succès ,votre voiture de location vous attend! ";
@@ -107,7 +109,7 @@ public class FrontlocationController implements Initializable {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Success");
             alert.setHeaderText("");
-            alert.setContentText("SMS Send Successfully");
+            alert.setContentText("SMS envoyé avec succès");
             alert.show(); } catch (Exception e){
 
     Alert alert = new Alert(Alert.AlertType.ERROR);

@@ -187,9 +187,30 @@ public class FrontlocationlistController implements Initializable {
                         stage.show();
                            
                         });
-       
-
-                            Hbx.getChildren().addAll(Détails);
+                        
+                        Button Commentaire = new Button("Commenter");
+                        Commentaire.setStyle("-fx-background-color:  #ffc100; ");
+                        
+                        Commentaire.setOnAction(event -> {
+                       VoitureHolder holder = VoitureHolder.getInstance();
+                        holder.setIdvoiture(n.getId());
+                            FXMLLoader loader = new FXMLLoader ();
+                            loader.setLocation(getClass().getResource("Commentaire.fxml"));
+                        try {
+                            loader.load();
+                           
+                              } catch (IOException ex) {
+ex.getMessage();                        }
+                       
+                             
+                        Parent parent = loader.getRoot();
+                        Stage stage = new Stage();
+                        stage.setScene(new Scene(parent));
+                        stage.show();
+                           
+                        });
+                       
+                            Hbx.getChildren().addAll(Détails,Commentaire);
 
                         setText(null);
                         setGraphic(Hbx);

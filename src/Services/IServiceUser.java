@@ -19,5 +19,5 @@ public interface IServiceUser {
      public ObservableList<user> ListUser();
      public void remove(user user);
      public void updateUser (user user);
-     public void login (user user);
+     public int login (user user);
      }

@@ -68,6 +68,7 @@ public class ReservationescController implements Initializable {
     private DatePicker tfdate;
     @FXML
     private TextField tftel;
+    @FXML
     private TableView<Escapade> tvescapade;
     private TableColumn<Escapade, String> colnom;
     private TableColumn<Escapade, String> coldescription;
@@ -113,9 +114,17 @@ public class ReservationescController implements Initializable {
     private Label labeltel;
     @FXML
     private Label labescapade;
+    @FXML
+    private TableColumn<Escapade,String> col1;
+    @FXML
+    private TableColumn<Escapade,String> col2;
+    @FXML
+    private TableColumn<Escapade,Integer> col3;
+    @FXML
+    private TableColumn<Escapade,String> col4;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-      //afficherescapade();
+      afficherescapade();
       tfnbre.setText("on accepte deux personnes minimum");
       tacomment.setText("vous pouver entrer un code promo ou laissez vide");
       
@@ -157,16 +166,16 @@ public class ReservationescController implements Initializable {
        
      
     }
-/*
+
     private void afficherescapade() {
         ServiceReservationesc se = new ServiceReservationesc();
         tvescapade.setItems(se.List());
-        colnom.setCellValueFactory(new PropertyValueFactory("title"));
-        coldescription.setCellValueFactory(new PropertyValueFactory("histoire"));
-        colprix.setCellValueFactory(new PropertyValueFactory("price"));
-        colville.setCellValueFactory(new PropertyValueFactory("ville"));
+        col1.setCellValueFactory(new PropertyValueFactory("title"));
+        col2.setCellValueFactory(new PropertyValueFactory("histoire"));
+        col3.setCellValueFactory(new PropertyValueFactory("price"));
+        col4.setCellValueFactory(new PropertyValueFactory("ville"));
     }
-*/
+
     @FXML
     private void ajouterreservation(ActionEvent event) throws IOException {
        

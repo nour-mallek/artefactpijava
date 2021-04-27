@@ -20,6 +20,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 /**
@@ -53,18 +54,34 @@ public class FormloginController implements Initializable {
       String Username = usernametf.getText();
       String Password = passwordtf.getText();
       user u=new user(Username,Password);
-      su.login(u);
-      
-      
-        Parent root = FXMLLoader.load(getClass().getResource("tvuser.fxml"));
-        
-        Stage stage = new Stage();
-        Scene scene = new Scene(root);
-        
-        stage.setScene(scene);
-        stage.show();
-        
-        
+        int log = su.login(u);
+        if (log == 1) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Success");
+            alert.setHeaderText("");
+            alert.setContentText("Connected");
+            alert.show();
+
+            Parent root = FXMLLoader.load(getClass().getResource("tvuser.fxml"));
+
+            Stage stage = new Stage();
+            Scene scene = new Scene(root);
+
+            stage.setScene(scene);
+            stage.show();
+        } else {
+              System.out.println("Wrong username or password");
+               Alert alert = new Alert(Alert.AlertType.ERROR);
+             alert.setTitle("Failed");
+             alert.setHeaderText("");
+             alert.setContentText("Wrong username or password");
+
+             alert.show();
+           
+
+        }
+
+
      
         
     }
